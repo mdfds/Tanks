@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Енциклопедія Танків</title>
+    <style>
+        /* Весь CSS додаємо сюди */
+        body {
+            background: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .tank-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        /* Стиль посилання-обгортки */
+        .tank-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card {
+            background: #252525;
+            padding: 30px 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Ефект при наведенні на всю картку */
+        .tank-link:hover .card {
+            border-color: #f39c12;
+            background: #333;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .card h3 {
+            margin: 0;
+            color: #f39c12;
+            text-transform: uppercase;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Світ Сталевих Монстрів</h1>
+        <p>Натисніть на картку танка, щоб дізнатися більше</p>
+
+        <div class="tank-grid">
+            <!-- Tiger I -->
+            <a href="tiger.html" class="tank-link">
+                <div class="card">
+                    <h3>Tiger I</h3>
+                    <p>Німеччина</p>
+                </div>
+            </a>
+
+            <!-- IS-7 -->
+            <a href="is7.html" class="tank-link">
+                <div class="card">
+                    <h3>ІС-7</h3>
+                    <p>СРСР</p>
+                </div>
+            </a>
+
+            <!-- FV4005 -->
+            <a href="fv4005.html" class="tank-link">
+                <div class="card">
+                    <h3>FV4005</h3>
+                    <p>Велика Британія</p>
+                </div>
+            </a>
+
+            <!-- Maus (Новий танк) -->
+            <a href="maus.html" class="tank-link">
+                <div class="card">
+                    <h3>Maus</h3>
+                    <p>Німеччина (Надважкий)</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
